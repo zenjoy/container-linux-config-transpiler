@@ -23,6 +23,7 @@ const (
 	OpenStackMetadata     = "openstack-metadata"
 	VagrantVirtualbox     = "vagrant-virtualbox"
 	CloudStackConfigDrive = "cloudstack-configdrive"
+	HCloud                = "hcloud"
 	Custom                = "custom"
 )
 
@@ -35,6 +36,7 @@ var Platforms = []string{
 	OpenStackMetadata,
 	VagrantVirtualbox,
 	CloudStackConfigDrive,
+	HCloud,
 	Custom,
 }
 

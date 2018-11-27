@@ -91,6 +91,14 @@ func TestPerformTemplating(t *testing.T) {
 			out{vars: []string{"foo: ${COREOS_DIGITALOCEAN_IPV4_PRIVATE_0} ${COREOS_DIGITALOCEAN_IPV4_PUBLIC_0}", "bar"}},
 		},
 		{
+			in{platform: "hcloud", vars: []string{"foo: {PRIVATE_IPV4}", "bar"}},
+			out{vars: []string{"foo: ${COREOS_HCLOUD_IPV4_PRIVATE_0}", "bar"}},
+		},
+		{
+			in{platform: "hcloud", vars: []string{"foo: {PRIVATE_IPV4} {PUBLIC_IPV4}", "bar"}},
+			out{vars: []string{"foo: ${COREOS_HCLOUD_IPV4_PRIVATE_0} ${COREOS_HCLOUD_IPV4_PUBLIC_0}", "bar"}},
+		},
+		{
 			in{platform: "azure", vars: []string{"foo: }HOSTNAME{", "bar"}},
 			out{vars: []string{"foo: }HOSTNAME{", "bar"}},
 		},

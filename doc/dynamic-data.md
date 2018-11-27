@@ -23,6 +23,7 @@ This is the information available in each provider.
 | Packet             | ✓          | ✓              | ✓             |                | ✓             |
 | OpenStack-Metadata | ✓          | ✓              | ✓             |                |               |
 | Vagrant-Virtualbox | ✓          | ✓              |               |                |               |
+| Hetzner Cloud      | ✓          | ✓              | ✓             |                |               |
 
 ## Custom metadata providers
 

@@ -76,6 +76,11 @@ var platformTemplatingMap = map[string]map[string]string{
 	platform.CloudStackConfigDrive: {
 		fieldHostname: "CLOUDSTACK_LOCAL_HOSTNAME",
 	},
+	platform.HCloud: {
+		fieldHostname:  "COREOS_HCLOUD_HOSTNAME",
+		fieldV4Private: "COREOS_HCLOUD_IPV4_LOCAL",
+		fieldV4Public:  "COREOS_HCLOUD_IPV4_PUBLIC",
+	},
 	platform.Custom: {
 		fieldHostname:  "COREOS_CUSTOM_HOSTNAME",
 		fieldV4Private: "COREOS_CUSTOM_PRIVATE_IPV4",
